@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AngularJS Tutorials</title>
+    <link rel="stylesheet" href="css/foundation.css">    
+</head>
+<body>
+
+    <div ng-app='zippyApp'>
+        <!-- Can use this format or inject it using just the templateUrl in a directive -->
+        <!-- The templates will be injected in the order that they are listed -->
+        <!--        
+            <script type="text/ng-template" id="zippy.html">
+                <div>
+                    <h3 ng-click="toggleContent()">{{ title }}</h3>
+                    <div ng-show="isContentVisible" ng-transclude></div>
+                </div>
+            </script>
+        -->
+
+        <input type="text" ng-model="model.title" />
+        <input type="text" ng-model="model.content" />
+        <zippy title="{{ model.title }}">
+            The content is: {{ model.content }}
+        </zippy>
+    </div>
+
+    <script type="text/javascript" src="js/angular.js"></script>
+    <script type="text/javascript" src="js/AngularJS-TemplateURL.js"></script>
+</body>
+</html>
+
